@@ -15,7 +15,9 @@ app.use(morgan('combine'));
 app.use(bodyParser.json());
 app.use(cors());
 
-
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/client/public/index.html');
+});
 
 /* Init database */
 database.init();
