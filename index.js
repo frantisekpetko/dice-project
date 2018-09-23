@@ -2,6 +2,7 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const path = require('path');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const cors = require('cors');
@@ -15,9 +16,7 @@ app.use(morgan('combine'));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/client/public/index.html');
-});
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 /* Init database */
 database.init();
