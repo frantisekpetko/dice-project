@@ -58,13 +58,13 @@ class App extends Component {
           <div className="App">
             <header className="App-header">
               <img src={dice} className="App-logo" alt="logo" />
-              <h1 className="App-title">Vítejte v aplikaci Dice!</h1>
+              <h1 className="App-title mt-2">Vítejte v aplikaci Dice!</h1>
             </header>
             <div>
-                  <p>{this.state.result === null ? "Hoďte kostkou" : this.state.result}</p>
+                  <p>{this.state.result === null ? "Hoďte kostkou" : this.state.result + "%"}</p>
             </div>
             <p className="App-intro">
-              <button onClick={() => this.handleGenerateDiceResult()}>Hoď kostkou</button>
+              <button className="btn-effect btn" onClick={() => this.handleGenerateDiceResult()}>Hoď kostkou</button>
             </p>
               {
                   results.length === 0 ?
@@ -73,8 +73,8 @@ class App extends Component {
                           <thead>
                           <tr>
                               <th>#</th>
-                              <th>Result</th>
-                              <th>Created</th>
+                              <th>Výsledek</th>
+                              <th>Vytvořeno</th>
                           </tr>
                           </thead>
                           <tbody>
@@ -82,7 +82,7 @@ class App extends Component {
                               return (
                                   <tr key={key}>
                                       <th scope="row">{result.id}</th>
-                                      <td>{result.result}</td>
+                                      <td>{result.result}%</td>
                                       <td>
                                           {`${new Date(result.created).toLocaleDateString()}
                                             ${new Date(result.created).toLocaleTimeString()}`}
