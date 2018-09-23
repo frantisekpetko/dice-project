@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import dice from './rpg_dice-percentage.png';
 import './App.css';
 import Api from './Api';
@@ -79,12 +78,15 @@ class App extends Component {
                           </tr>
                           </thead>
                           <tbody>
-                          {results.map((result)=> {
+                          {results.map((result, key)=> {
                               return (
-                                  <tr>
+                                  <tr key={key}>
                                       <th scope="row">{result.id}</th>
                                       <td>{result.result}</td>
-                                      <td>{new Date(result.created).toLocaleTimeString()}</td>
+                                      <td>
+                                          {`${new Date(result.created).toLocaleDateString()}
+                                            ${new Date(result.created).toLocaleTimeString()}`}
+                                      </td>
                                   </tr>
                               )
                           })}

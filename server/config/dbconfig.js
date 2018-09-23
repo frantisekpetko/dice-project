@@ -13,7 +13,7 @@ let init = function () {
     db.run("CREATE TABLE if not exists dice (" +
         "id INTEGER PRIMARY KEY AUTOINCREMENT," +
         " result INT," +
-        " created DATETIME DEFAULT CURRENT_TIMESTAMP" +
+        " created DATE DEFAULT (datetime('now', 'localtime'))" +
         ")");
 
  /*   db.run("CREATE TABLE if not exists driver (" +

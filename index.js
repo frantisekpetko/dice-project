@@ -6,7 +6,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const cors = require('cors');
 /* Database configuration */
-const database = require('./app/config/dbconfig');
+const database = require('./server/config/dbconfig');
 
 /* helmet protects against well known vulnerabilities */
 app.use(helmet());
@@ -36,7 +36,7 @@ app.use(bodyParser.json());
 
 /* Router configuration */
 const REST_API_ROOT = '/api';
-app.use(REST_API_ROOT, require('./app/routes/Router'));
+app.use(REST_API_ROOT, require('./server/routes/Router'));
 
 //process.env.NODE_ENV = 'production';
 

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "POC - NodeJS REST API using SQLite as a database.",
   "scripts": {
-    "postinstall": "cd client && npm install && node scripts/build.js && cd .. && npm install"
+    "postinstall": "cd client && npm i && node scripts/build.js"
   },
   "dependencies": {
     "bluebird": "*",
@@ -13,6 +13,7 @@
     "express": "*",
     "helmet": "^3.13.0",
     "morgan": "^1.9.1",
-    "sqlite": "*"
+    "sqlite": "*",
+    "nodemon": "^1.18.4"
   }
 }
