@@ -68,7 +68,7 @@ class App extends Component {
             </p>
               {
                   results.length === 0 ?
-                      <p>No results.</p> :
+                      <p>Zatím žádné výsledky. Prosím hoďte kostkou.</p> :
                       <Table size="sm" className="optimized-table">
                           <thead>
                           <tr>
