@@ -1,21 +1,91 @@
 .App {
+
   text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
   height: 80px;
+    -webkit-animation: swing 1s ease infinite;
+    animation: swing 1s ease infinite;
+
+}
+
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 }
 
 .App-header {
-  background-color: firebrick;
-  height: 150px;
+  background-color: rgba(128,0,0, 0.8);
+  height: 220px;
   padding: 20px;
   color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 2.5em;
 }
 
 .App-intro {
@@ -25,14 +95,16 @@
 .optimized-table {
   width: 30% !important;
   margin: 0 auto;
+    background-color: rgba(128,0,0, 0.8) !important;
+
 
 }
 
 .btn-effect {
-    box-shadow: inset 0 0 0 0 #31302B !important;
-    -webkit-transition: all linear 0.05s;
-    -moz-transition: all linear 0.05s;
-    transition: all linear 0.05s;
+    box-shadow: inset 0 0 0 0 #800000 !important;
+    -webkit-transition: all linear 1s;
+    -moz-transition: all linear 1s;
+    transition: all linear 1s;
 
 }
 
@@ -40,8 +112,6 @@
     box-shadow: inset 100px 0 0 0 #e0e0e0 !important;
 }
 
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.percent-result {
+    font-size: 2em;
 }

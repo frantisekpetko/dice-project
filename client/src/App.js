@@ -60,7 +60,9 @@ class App extends Component {
               <img src={dice} className="App-logo" alt="logo" />
               <h1 className="App-title mt-2">Vítejte v aplikaci Dice!</h1>
             </header>
-            <div>
+            <main>
+                <div className="layer">
+            <div className="percent-result">
                   <p>{this.state.result === null ? "Hoďte kostkou" : this.state.result + "%"}</p>
             </div>
             <p className="App-intro">
@@ -69,7 +71,7 @@ class App extends Component {
               {
                   results.length === 0 ?
                       <p>Zatím žádné výsledky. Prosím hoďte kostkou.</p> :
-                      <Table size="sm" className="optimized-table">
+                      <Table dark size="sm" className="optimized-table">
                           <thead>
                           <tr>
                               <th>#</th>
@@ -93,7 +95,10 @@ class App extends Component {
                           </tbody>
                       </Table>
               }
+                </div>
+            </main>
           </div>
+
         );
       }
 }

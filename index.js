@@ -24,10 +24,13 @@ database.init();
 
 
 /* Init server listening */
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 3000;
 app.listen(port, function () {
     console.log("Server listening on port : " + port);
 });
+
+
+
 
 /* Express configuration */
 app.use(bodyParser.urlencoded({extended: false}));
