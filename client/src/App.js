@@ -16,11 +16,12 @@ class App extends Component {
       getResultData = () => {
           Api().get("dice")
               .then((response)=> {
-                  this.setState({results: response.data});
-                  console.log(response.error)
+                this.setState({results: response.data});
+                //console.log(response.error)
               })
               .catch((err)=> {
-                  console.log(err)
+                  if(err.message !== "Entity not found")
+                    console.log(err)
               })
       };
 
