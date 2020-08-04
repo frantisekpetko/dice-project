@@ -1,11 +1,11 @@
 {
   "name": "awesome-dice-project",
   "version": "1.0.0",
-  "description": "POC - NodeJS REST API using SQLite as a database.",
+  "description": "NodeJS REST API using SQLite as a database.",
   "scripts": {
-    "postinstall": "cd client && npm i && node scripts/build.js",
+    "postinstall": "cd client && npm i && node scripts/build.js && NODE_ENV=production node index.js",
     "dev": "npm i && node index.js",
-    "start": "npm i && NODE_ENV=production node index.js"
+    "start": "npm i"
   },
   "dependencies": {
     "bluebird": "*",
