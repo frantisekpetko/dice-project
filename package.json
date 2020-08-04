@@ -1,5 +1,5 @@
 {
-  "name": "dice-project",
+  "name": "awesome-dice-project",
   "version": "1.0.0",
   "description": "POC - NodeJS REST API using SQLite as a database.",
   "scripts": {
