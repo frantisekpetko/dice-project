@@ -1,0 +1,8 @@
+{
+  "name": "Start on Heroku: Node.js",
+  "description": "A barebones Node.js app using Express 4 and React.js",
+  "repository": "https://github.com/frantisekpetko/awesome-dice-project.git",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "keywords": ["node", "express", "heroku", "reactjs"],
+  "image": "heroku/nodejs"
+}
