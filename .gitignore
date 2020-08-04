@@ -3,3 +3,4 @@ node_modules/
 client/node_modules
 sqlite.db
 package.lock
+yarn.lock
