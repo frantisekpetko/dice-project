@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "NodeJS REST API using SQLite as a database.",
   "scripts": {
-    "postinstall": "cd client && npm i && node scripts/build.js && NODE_ENV=production node index.js",
+    "postinstall": "cd client && npm i && node scripts/build.js && cd ../ && NODE_ENV=production node index.js",
     "dev": "npm i && node index.js",
     "start": "npm i"
   },
